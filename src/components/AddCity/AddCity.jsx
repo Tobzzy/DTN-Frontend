@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import { useMutation } from "@apollo/client";
 import { CREATE_CITY } from "./AddCity.gql";
+import { Button } from "../Button";
 import { City } from "../../fragments";
+import * as Styled from "./AddCity.styled";
 
 export const AddCity = () => {
   const [name, setName] = useState("");
@@ -23,25 +25,27 @@ export const AddCity = () => {
   });
 
   return (
-    <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          createCity({
-            variables: {
-              name,
-            },
-          });
-        }}
-      >
-        <input
+    <Styled.Main
+      onSubmit={(e) => {
+        e.preventDefault();
+        createCity({
+          variables: {
+            name,
+          },
+        });
+      }}
+    >
+      <Styled.Column>
+        <Styled.Input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-        ></input>
-        <button>Add City</button>
-      </form>
-    </div>
+        ></Styled.Input>
+      </Styled.Column>
+      <Button backgroundColor="#91c9a8" type="submit">
+        Add City
+      </Button>
+    </Styled.Main>
   );
 };

@@ -6,6 +6,7 @@ const img =
 export const Global = createGlobalStyle(() => ({
   "*": {
     boxSizing: "border-box",
+    textAlign: "center",
   },
   body: {
     fontFamily: "sans-serif",
