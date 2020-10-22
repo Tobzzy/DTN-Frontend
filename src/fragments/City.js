@@ -4,9 +4,12 @@ export const City = gql`
   fragment City on City {
     _id
     name
-    temperature
-    windSpeed
-    humidity
-    timestamp
+    weather {
+      _id
+      temperature
+      windSpeed
+      humidity
+      timestamp
+    }
   }
 `;

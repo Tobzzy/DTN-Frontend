@@ -27,7 +27,7 @@ export const Modal = styled.div(() => ({
   borderRadius: "1rem",
   display: "flex",
   flexDirection: "column",
-  maxWidth: "800px",
+  maxWidth: "1000px",
   padding: "1rem",
   position: "relative",
   width: "100%",

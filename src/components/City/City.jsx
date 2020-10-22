@@ -21,7 +21,7 @@ export const City = ({ cityName }) => {
         />
       )}
       <Styled.City onClick={() => setcityDataVisible(true)}>
-        <span>{cityName}</span>
+        <span>{name}</span>
       </Styled.City>
     </>
   );
