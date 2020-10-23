@@ -10,3 +10,12 @@ export const CREATE_CITY = gql`
   }
   ${City}
 `;
+
+export const GET_CITIES = gql`
+  query {
+    cities {
+      ...City
+    }
+  }
+  ${City}
+`;

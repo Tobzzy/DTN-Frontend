@@ -33,6 +33,6 @@ export const Main = styled.main(() => ({
 }));
 
 export const Content = styled.div(() => ({
-  maxWidth: "600px",
+  maxWidth: "300px",
   width: "100%",
 }));

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const City = styled.div(() => ({
-  padding: "1rem",
+  cursor: "pointer",
   display: "flex",
   justifyContent: "center",
-  maxWidth: "300px",
-  cursor: "pointer",
+  padding: "1rem",
+  width: "100%",
   ":nth-child(2n)": {
     backgroundColor: "hsl(0, 0%, 95%)",
   },

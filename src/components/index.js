@@ -7,3 +7,4 @@ export * from "./AddCity";
 export * from "./Button";
 export * from "./CityWeatherData";
 export * from "./Modal";
+export * from "./StopPolling";

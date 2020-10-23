@@ -2,12 +2,13 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 import { useQuery } from "@apollo/client";
-import { GET_CITY_BY_ID } from "./CityWeatherData.gql";
+import { GET_CITY_BY_NAME } from "./CityWeatherData.gql";
 import { Modal } from "../Modal";
+import { StopPolling } from "../StopPolling";
 
 export const CityWeatherData = ({ cityName, onClose }) => {
-  const { data: { city: { name, weather } = {} } = {} } = useQuery(
-    GET_CITY_BY_ID,
+  const { data: { city: { _id: cityId, name, weather } = {} } = {} } = useQuery(
+    GET_CITY_BY_NAME,
     {
       variables: { name: cityName },
     }
@@ -79,6 +80,7 @@ export const CityWeatherData = ({ cityName, onClose }) => {
   return (
     <Modal onClose={onClose}>
       <Line data={state} options={options} />
+      <StopPolling cityId={cityId} cityName={cityName} />
     </Modal>
   );
 };

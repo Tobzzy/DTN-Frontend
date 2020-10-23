@@ -11,6 +11,7 @@ export const Button = styled.button(({ backgroundColor, disabled }) => ({
   justifyContent: "center",
   marginTop: "0.5rem",
   outline: "none",
+  width: "120px",
   border: "none",
   height: "30px",
   "@media (hover: hover) and (pointer: fine)": {

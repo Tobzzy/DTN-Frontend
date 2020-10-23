@@ -19,7 +19,8 @@ export const Column = styled.div(({ flex = 1 }) => ({
 }));
 
 export const Input = styled.input(({ flex = 1 }) => ({
-  marginTop: "0.5rem",
-  width: "60%",
+  height: "2rem",
   justifyContent: "center",
+  marginTop: "0.5rem",
+  width: "100%",
 }));
