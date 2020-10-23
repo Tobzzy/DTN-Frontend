@@ -10,8 +10,8 @@ export const Cities = () => {
 
   return (
     <Styled.Cities>
-      {cities.map(({ name }) => (
-        <City key={name} cityName={name} />
+      {cities.map((element, index) => (
+        <City key={index} cityName={element.name} />
       ))}
     </Styled.Cities>
   );

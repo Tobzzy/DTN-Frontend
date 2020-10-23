@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { useMutation, useQuery } from "@apollo/client";
-import { CREATE_CITY, GET_CITIES } from "./AddCity.gql";
+import { useMutation } from "@apollo/client";
+import { CREATE_CITY } from "./AddCity.gql";
 import { Button } from "../Button";
 import { City } from "../../fragments";
 import * as Styled from "./AddCity.styled";
@@ -24,32 +24,14 @@ export const AddCity = () => {
     },
   });
 
-  const setNameValue = () => {
-    createCity({
-      variables: {
-        name,
-      },
-    });
-  };
-  const { data: { cities = [] } = {} } = useQuery(GET_CITIES);
-  // const checkSubmit = () => {
-  //   cities.forEach((element) => {
-  //     if (name !== element.name) {
-  //       setNameValue();
-  //     } else if (element.name === name) {
-  //       console.log("you can create the same name ");
-  //       return "you can create the same name ";
-  //     } else {
-  //       setNameValue();
-  //     }
-  //   });
-  // };
-
   return (
     <Styled.Main
       onSubmit={(e) => {
-        e.preventDefault();
-        setNameValue();
+        createCity({
+          variables: {
+            name,
+          },
+        });
       }}
     >
       <Styled.Column>
