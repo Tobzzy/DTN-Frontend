@@ -34,7 +34,7 @@ yarn install
 yarn start
 ```
 
-- Server will be live on [localhost](http://localhost:4000) port 4000
+- Server will be live on [localhost](http://localhost:3000) port 3000
 
 ## License
 
