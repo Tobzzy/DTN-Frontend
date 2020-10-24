@@ -19,6 +19,7 @@ GraphQL
 
 ```JavaScript
 REACT_APP_GRAPHQL_URI
+REACT_APP_GRAPHQL_WEBSOCKET_URI
 ```
 
 - Use the package manager [yarn](https://yarnpkg.com/) to install app

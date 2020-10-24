@@ -10,3 +10,12 @@ export const GET_CITY_BY_NAME = gql`
   }
   ${City}
 `;
+
+export const CITY_SUBSCRIPTION = gql`
+  subscription($name: String!) {
+    city(name: $name) {
+      ...City
+    }
+  }
+  ${City}
+`;
