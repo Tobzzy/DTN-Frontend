@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
 import { CREATE_CITY } from "./AddCity.gql";
@@ -7,6 +8,7 @@ import { City } from "../../fragments";
 import * as Styled from "./AddCity.styled";
 
 export const AddCity = () => {
+  const { push } = useHistory();
   const [name, setName] = useState("");
   const [createCity] = useMutation(CREATE_CITY, {
     update: (cache, { data: { createCity } }) => {
@@ -32,12 +34,13 @@ export const AddCity = () => {
             name,
           },
         });
+        push("/");
       }}
     >
       <Styled.Column>
         <Styled.Input
-          type="text"
           value={name}
+          placeholder="Enter city name"
           onChange={(e) => setName(e.target.value)}
           required
         ></Styled.Input>

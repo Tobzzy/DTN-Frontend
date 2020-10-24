@@ -23,4 +23,5 @@ export const Input = styled.input(({ flex = 1 }) => ({
   justifyContent: "center",
   marginTop: "0.5rem",
   width: "100%",
+  textTransform: "capitalize",
 }));

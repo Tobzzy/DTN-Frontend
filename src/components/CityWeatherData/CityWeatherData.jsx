@@ -19,19 +19,6 @@ export const CityWeatherData = ({ cityName, onClose }) => {
   const humidityData = weather.map(({ humidity }) => humidity);
   const windSpeedData = weather.map(({ windSpeed }) => windSpeed);
 
-  // var date = new Date(timestampData * 1000);
-  // var hours = date.getHours();
-  // var minutes = "0" + date.getMinutes();
-  // var seconds = "0" + date.getSeconds();
-  // var formattedTime =
-  //   hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
-  // console.log(formattedTime);
-
-  // console.log("timestampData", timestampData);
-  // console.log("temperatureData", temperatureData);
-  // console.log("humidityData", humidityData);
-  // console.log("windSpeedData", windSpeedData);
-
   const state = {
     labels: timestampData,
     datasets: [
